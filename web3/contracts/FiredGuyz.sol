@@ -55,22 +55,4 @@ contract FiredGuys is ERC721, ERC721URIStorage, Ownable {
         return existignURIs[uri] == 1; // returns true
     }
 
-        function payToMint(address recipient, strin memory) public payable returns(uint256){
-            require(existignURIs[metadataURI] != 1, "NFT has already been minted");
-            require(msg.value >= 0.5 ether, "Need to pay up!");
-
-            uint256 newItemId = _tokenIdCounter.current();
-            _tokenIdCounter.increment();
-            existignURIs[metadataURI] = 1;
-
-            _mint(recipient, newItemId);
-            _setTokenURI(newItemId, metadataURI);
-            
-            return newItemId;
-        }
-
-           // gt token count
-        function count() public view returns(uint256) {
-            return _tokenIdCounter.current();
-        }
-}
+       

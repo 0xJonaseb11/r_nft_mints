@@ -11,6 +11,15 @@ module.exports = {
     sepolia: {
       url: "",
       chainId: 11155111,
-    }
+    },
+    goerli: {
+      url: "",
+      chainId: 5,
+    },
+    mainnet:{
+      url: "",
+      chainId: 1, 
+    },
+    
   }
 };

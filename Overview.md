@@ -6,4 +6,4 @@ They support royalty checkouts
   
 
   ### index
-  URIStorage enbles us to associate and upload to IPFs when it's token is minted 
+  URIStorage enbles us to associate and upload to IPFs when it's token is minted. 

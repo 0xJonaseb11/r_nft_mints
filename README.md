@@ -7,7 +7,8 @@ Enjoy the incredibility of Decentralizaion
  Credits used 
   - solidity
   - Chainlink Randomness
-  - js
+  - ethersjs library
+  - reactjs
 
 # Getting started
 

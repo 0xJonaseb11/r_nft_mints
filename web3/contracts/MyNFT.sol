@@ -44,6 +44,12 @@ contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradea
         return super.tokenURI(tokenId);
     }
 
+    function supportsInterfaces(bytes4 interfaceId) 
+    public view override(ERC721Upgradeable, ERC721StorageUpgradeable)
+    returns (bool) {
+        return super.supportsInterfaces(interfaceId);
+    }
+
 
 
 

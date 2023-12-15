@@ -6,4 +6,11 @@ module.exports = {
   paths: {
     artifacts: './src/artifacts',
   },
+  networks: {
+    hardhat: {},
+    sepolia: {
+      url: "",
+      chainId: 11155111,
+    }
+  }
 };

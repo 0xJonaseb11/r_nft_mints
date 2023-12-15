@@ -9,8 +9,12 @@ Enjoy the incredibility of Decentralizaion
   - Chainlink Randomness
   - ethersjs library
   - reactjs
+  - IPFS
+  - Hardhat toolchain
 
 # Getting started
+ Uploading our files to IPFS - offchain data storing
+
 
 
 <hr>

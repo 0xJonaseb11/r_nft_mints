@@ -65,4 +65,10 @@ contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradea
     {
         return super.supportsInterface(interfaceId);
     }
+
+    //check whether content belongs to another person
+    function isContentOwned(string memory uri)public view returns(bool) {
+        return existignURIs[uri] == 1; // returns true
+    }
+    
 }

@@ -9,5 +9,8 @@
     "ethereum-waffle": "^4.0.10",
     "ethers": "^5.7.2",
     "hardhat": "^2.19.2"
+  },
+  "dependencies": {
+    "@openzeppelin/cli": "^2.8.2"
   }
 }

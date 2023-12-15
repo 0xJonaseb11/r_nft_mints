@@ -81,6 +81,12 @@ contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradea
 
             _mint(recipient, newItemId);
             _setTokenURI(newItemId, metadataURI);
+            
+            return newItemId;
+        }
 
+           // gt token count
+        function count() public view returns(uint256) {
+            return _tokenIdCounter.current();
         }
 }

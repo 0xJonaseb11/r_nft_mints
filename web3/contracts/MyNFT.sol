@@ -49,8 +49,4 @@ contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradea
     returns (bool) {
         return super.supportsInterfaces(interfaceId);
     }
-
-
-
-
 }

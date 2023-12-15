@@ -13,11 +13,11 @@ Enjoy the incredibility of Decentralizaion
   - Hardhat toolchain
 
 # Getting started
- Uploading our files to IPFS - offchain data storing
- Interactive user interface with the very popular reactjs library
- Designing an intuitive super strong solidity smart contract.
- Metamask pairing 
- Client - blockend pairing
+ - Uploading our files to IPFS - offchain data storing
+ - Interactive user interface with the very popular   reactjs library
+ - Designing an intuitive super strong solidity smart contract.
+ - Metamask pairing 
+ - Client - blockend pairing
 
 
 <hr>

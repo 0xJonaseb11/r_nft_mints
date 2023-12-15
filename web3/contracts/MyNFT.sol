@@ -10,6 +10,12 @@ import "@openzeppelin/contracts-upgradeable@5.0.1/proxy/utils/UUPSUpgradeable.so
 contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradeable, OwnableUpgradeable, UUPSUpgradeable {
     uint256 private _nextTokenId;
 
+     using Counters for Counters.Counter;
+
+     Counters.Counter private _tokenIdCounter;
+
+     mapping(string => uint8) existignURIs
+
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
         _disableInitializers();

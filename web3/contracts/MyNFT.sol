@@ -22,4 +22,10 @@ contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradea
         __UUPSUpgradeable_init();
     }
 
+    function _baseURI() internal pure override returns(string memory) {
+        return "ipfs://";
+    }
+    
+
+
 }

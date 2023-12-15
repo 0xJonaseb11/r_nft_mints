@@ -9,6 +9,12 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 contract FiredGuys is ERC721, ERC721URIStorage, Ownable {
     uint256 private _nextTokenId;
 
+     using Counters for Counters.Counter;
+
+     Counters.Counter private _tokenIdCounter;
+
+     mapping(string => uint8) existignURIs;
+
     constructor(address initialOwner)
         ERC721("FiredGuys", "FYR")
         Ownable(initialOwner)
@@ -43,4 +49,6 @@ contract FiredGuys is ERC721, ERC721URIStorage, Ownable {
     {
         return super.supportsInterface(interfaceId);
     }
+
+    
 }

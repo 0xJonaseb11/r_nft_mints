@@ -70,13 +70,8 @@ contract FiredGuys is ERC721, ERC721URIStorage, Ownable {
         }
 
            // gt token count
-        function count() public view returns(uint256) {
-            return _tokenIdCounter.current();
-        }
-
-       
-       
-       
-       
+    function count() public view returns(uint256) {
+        return _tokenIdCounter.current();
+        }     
     
 }

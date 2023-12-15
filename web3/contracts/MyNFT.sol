@@ -36,7 +36,13 @@ contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradea
     internal onlyOwner override {}
 
     // The following funtions are overrides required by solidity
-    
+
+    function tokenURI(uint256 tokenId)
+    public view 
+    override(ERC721Upgradeable, ERC721URIStorageUpgradeable)
+    returns (string memory) {
+        return super.tokenURI(tokenId);
+    }
 
 
 

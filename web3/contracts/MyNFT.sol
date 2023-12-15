@@ -70,5 +70,17 @@ contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradea
     function isContentOwned(string memory uri)public view returns(bool) {
         return existignURIs[uri] == 1; // returns true
     }
-    
+
+        function payToMint(address recipient, strin memory) public payable returns(uint256){
+            require(existignURIs[metadataURI] != 1, "NFT has already been minted");
+            require(msg.value >= 0.5 ether, "Need to pay up!");
+
+            uint256 newItemId = _tokenIdCounter.current();
+            _tokenIdCounter.increment();
+            existignURIs[metadataURI] = 1;
+
+            _mint(recipient, newItemId);
+        }
+
+
 }

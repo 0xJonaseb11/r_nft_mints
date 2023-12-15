@@ -9,6 +9,14 @@ import { UUPSUpgradeable } from "openzeppelin/contracts-upgradeable/proxy/utils/
 
 
 contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradeable, OwnableUpgradeable, UUPSUpgradeable {
-    
+    uint256 private _nextTokenId;
+
+    constructor () {
+        _disableInitializer();
+    }
+
+    function initialize(address initialOwner) initializer public {
+        
+    }
 
 }

@@ -16,7 +16,10 @@ contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradea
     }
 
     function initialize(address initialOwner) initializer public {
-        
+        __ERC721_init("FireGuys", FYR);
+        __ERC721URIStorage_init();
+        __Ownable_init(initialOwner);
+        __UUPSUpgradeable_init();
     }
 
 }

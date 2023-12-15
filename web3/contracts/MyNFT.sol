@@ -1,11 +1,12 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.19;
 
-import "@openzeppelin/contracts-upgradeable@5.0.1/token/ERC721/ERC721Upgradeable.sol";
-import "@openzeppelin/contracts-upgradeable@5.0.1/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable@5.0.1/access/OwnableUpgradeable.sol";
-import "@openzeppelin/contracts-upgradeable@5.0.1/proxy/utils/Initializable.sol";
-import "@openzeppelin/contracts-upgradeable@5.0.1/proxy/utils/UUPSUpgradeable.sol";
+import {ERC721Upgradeable} from "@openzeppelin/contracts-upgradeable@5.0.1/token/ERC721/ERC721Upgradeable.sol";
+import {ERC721URIStorageUpgradeable} from "@openzeppelin/contracts-upgradeable@5.0.1/token/ERC721/extensions/ERC721URIStorageUpgradeable.sol";
+import {OwnableUpgradeable} from "@openzeppelin/contracts-upgradeable@5.0.1/access/OwnableUpgradeable.sol";
+import {Initializable} from "@openzeppelin/contracts-upgradeable@5.0.1/proxy/utils/Initializable.sol";
+import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable@5.0.1/proxy/utils/UUPSUpgradeable.sol";
+import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
 
 contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradeable, OwnableUpgradeable, UUPSUpgradeable {
     uint256 private _nextTokenId;

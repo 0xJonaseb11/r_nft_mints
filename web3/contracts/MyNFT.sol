@@ -14,7 +14,7 @@ contract FiredGuys is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradea
 
      Counters.Counter private _tokenIdCounter;
 
-     mapping(string => uint8) existignURIs
+     mapping(string => uint8) existignURIs;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {

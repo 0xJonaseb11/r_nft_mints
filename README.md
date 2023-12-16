@@ -7,7 +7,7 @@
 Get ready to mint unlimited NFTs with full potential of decentralization | Web3.0
 Enjoy the incredibility of Decentralizaion
 
-# About
+### About
 
  Credits used
 
@@ -18,7 +18,7 @@ Enjoy the incredibility of Decentralizaion
 - IPFS
 - Hardhat toolchain
 
-# Getting started
+### Getting started
 
 - Uploading our files to IPFS - offchain data storing
 - Interactive user interface with the very popular    reactjs library
@@ -26,6 +26,7 @@ Enjoy the incredibility of Decentralizaion
 - Metamask pairing
 - Client - blockend pairing
 
------
+
+----
 
 @Jonas-sebera

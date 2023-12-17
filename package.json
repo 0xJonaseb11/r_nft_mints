@@ -11,6 +11,7 @@
     "hardhat": "^2.19.2"
   },
   "dependencies": {
-    "@openzeppelin/cli": "^2.8.2"
+    "@openzeppelin/cli": "^2.8.2",
+    "@openzeppelin/contracts-upgradeable": "^5.0.1"
   }
 }

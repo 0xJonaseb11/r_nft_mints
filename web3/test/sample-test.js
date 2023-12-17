@@ -15,7 +15,13 @@ describe("FiredGuys", function () {
         // when user purchased any nft
         expect(balance).to.equal(0);
 
-        const newlyMintedToken = await firedGuys.payToMint(recipient, metadataURI, {value: ethers.utils.parseEther('0.01')});
+        const newlyMintedToken = await firedGuys.payToMint(recipient, metadataURI, {value: ethers.utils.parseEther('0.05')});
+        
+        // wait until the transaction is fully mined
+        await newlyMintedToken.wait();
+        expect(balance).to.equal(1);
+
+        expect(await firedGuys.isContentOwned(metadataURI)).to.equal(true);
         
 
 

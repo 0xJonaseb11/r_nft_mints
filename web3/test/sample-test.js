@@ -15,7 +15,8 @@ describe("FiredGuys", function () {
         // when user purchased any nft
         expect(balance).to.equal(0);
 
-        const newlyMintedToken = await firedGuys.payToMint(recipient, metadataURI, {value: ethers.utils.parseEther('0.05')});
+        const newlyMintedToken = await firedGuys.payToMint(recipient, metadataURI, {value: ethers.utils.parseEther('0.01')});
+        
 
 
     });

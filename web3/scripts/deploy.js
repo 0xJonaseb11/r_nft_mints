@@ -17,8 +17,8 @@ const runMain = async () => {
     await main();
     process.exit(0)
   } catch (error) {
-    process.exit(1);
     console.error(error);
+    process.exit(1);
   }
 }
   

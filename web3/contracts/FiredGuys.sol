@@ -4,7 +4,7 @@ pragma solidity ^0.8.19;
 import { ERC721 } from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import { ERC721URIStorage } from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import { Ownable } from "@openzeppelin/contracts/access/Ownable.sol";
-import { Counter } from "@openzeppelin/contracts/utils/Counters.sol";
+import { Counter } from "@openzeppelin/contracts/utils/Counter.sol";
 
 /// @custom:security-contact sebejaz99@gmail.com
 contract FiredGuys is ERC721, ERC721URIStorage, Ownable {

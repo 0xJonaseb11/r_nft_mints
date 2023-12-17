@@ -7,5 +7,8 @@ describe("FiredGuys", function () {
         const firedGuys = await FiredGuys.deploy();
         
         await firedGuys.deployed();
+
+        const recipient = '';
+        
     });
 });

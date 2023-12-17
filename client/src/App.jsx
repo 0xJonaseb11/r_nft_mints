@@ -1,5 +1,5 @@
 import Install from "./components/Install";
-import Home from './components/Main';
+import Home from './components/Home';
 
 const App = () => {
   if (window.ethereum) {

@@ -1,9 +1,13 @@
 import React from 'react'
+import { Wallet, ethers } from 'ethers';
+import WalletBalance from './WalletBalance';
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <div>
+      <WalletBalance />
+    </div>
   )
 }
 
-export default Home
+export default Home;

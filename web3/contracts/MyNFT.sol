@@ -95,8 +95,12 @@ pragma solidity ^0.8.19;
 
         // Block information
         // get current miner address
-        function getCurrentBlockMiner(address _minersAddress) public view returns(address) {
+        function getCurrentBlockMiner() public view returns(address) {
             return block.coinbase;
+        }
 
+        // get base fee && chainid
+        function getContractBasefee() public view returns(uint256, uint256) {
+            return (block.basefee, block.chainid);
         }
 }

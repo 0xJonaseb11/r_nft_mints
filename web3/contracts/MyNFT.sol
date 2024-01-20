@@ -94,11 +94,9 @@ pragma solidity ^0.8.19;
 //         }
 
         // Block information
+        // get current miner address
         function getCurrentBlockMiner(address _minersAddress) public view returns(address) {
-            minersAddress = block.coinbase(address);
-            minersAddress = _minersAddress;
-
-            return _minersAddress;
+            return block.coinbase;
 
         }
 }

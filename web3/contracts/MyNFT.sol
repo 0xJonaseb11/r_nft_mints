@@ -8,7 +8,7 @@ import {Initializable} from "@openzeppelin/contracts-upgradeable@5.0.1/proxy/uti
 import {UUPSUpgradeable} from "@openzeppelin/contracts-upgradeable@5.0.1/proxy/utils/UUPSUpgradeable.sol";
 import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
 
- contract FiredGuys /* is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradeable, OwnableUpgradeable, UUPSUpgradeable*/ {
+ contract FiredGuys  is Initializable, ERC721Upgradeable, ERC721URIStorageUpgradeable, OwnableUpgradeable, UUPSUpgradeable {
     uint256 private _nextTokenId;
 
     address public minersAddress;
@@ -17,7 +17,7 @@ import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
 
      Counters.Counter private _tokenIdCounter;
 
-     mapping(string => uint8) existignURIs;
+     mapping(string => uint8) existingURIs;
 
     /// @custom:oz-upgrades-unsafe-allow constructor
     constructor() {
@@ -41,7 +41,7 @@ import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
         _setTokenURI(tokenId, uri);
     }
 
-    function payToMint(address recipient, strin memory) {}
+    // function payToMint(address recipient, string memory) public {}
 
     function _authorizeUpgrade(address newImplementation)
         internal
@@ -71,16 +71,16 @@ import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
 
     //check whether content belongs to another person
     function isContentOwned(string memory uri)public view returns(bool) {
-        return existignURIs[uri] == 1; // returns true
+        return existingURIs[uri] == 1; // returns true
     }
 
-        function payToMint(address recipient, strin memory) public payable returns(uint256){
-            require(existignURIs[metadataURI] != 1, "NFT has already been minted");
+        function payToMint(address recipient, string memory metadataURI) public payable returns(uint256){
+            require(existingURIs[metadataURI] != 1, "NFT has already been minted");
             require(msg.value >= 0.5 ether, "Need to pay up!");
 
             uint256 newItemId = _tokenIdCounter.current();
             _tokenIdCounter.increment();
-            existignURIs[metadataURI] = 1;
+            existingURIs[metadataURI] = 1;
 
             _mint(recipient, newItemId);
             _setTokenURI(newItemId, metadataURI);
@@ -100,7 +100,7 @@ import {Counters} from "@openzeppelin/contracts/utils/Counters.sol";
         }
 
         // get base fee && chainid
-        function getContractBasefee() public view returns(uint256, uint256) {
-            return (block.basefee, block.chainid);
-        }
+        // function getContractBasefee() public view returns(uint256, uint256) {
+        //     return (block.basefee, block.chainid);
+        // }
 }

@@ -54,7 +54,7 @@ contract FiredGuys is ERC721, ERC721URIStorage, Ownable {
         //check whether content belongs to another person
     function isContentOwned(string memory uri)public view returns(bool) {
         return existignURIs[uri] == 1; // returns true
-    }
+    } 
 
     function payToMint(address recipient, strin memory) public payable returns(uint256){
         require(existignURIs[metadataURI] != 1, "NFT has already been minted");

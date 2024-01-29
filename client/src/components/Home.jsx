@@ -33,7 +33,7 @@ function NFTImage({tokenId, getCount}) {
   const imageURI = `img/${tokenId}.png`;
 
   const [isMinted, setIsMinted] = useState(false);
-}[]
+}
 
 useEffect(() => {
   getMintedStatus();
@@ -93,57 +93,5 @@ return (
   </div>
 );
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
 
 export default Home;

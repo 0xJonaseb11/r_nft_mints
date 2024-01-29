@@ -25,20 +25,6 @@ const Home = () => {
 
 
   }
-    return (
-    <div>
-      <WalletBalance />
-      <h1>Fired Guys NFT Collection</h1>
-      {Array(totalMinted + 1)
-      .fill(0)
-      .map((_, i) => (
-       <div  key={i}>
-        <NFTImage tokenId={i} />
-       </div>
-      ))};
-    </div>
-  );
-}
 
 function NFTImage({tokenId, getCount}) {
   const contentId = 'IPFS url like Pinata';
@@ -69,9 +55,44 @@ const mintToken = async () => {
   });
 
   await result.wait();
-  getMintedStatus;
+  getMintedStatus();
+
+}
+
+async function getURI() {
+  const url = await contract.tokenURI(tokenId);
+}
 
 
+return (
+  <div>
+    <div>
+      <img src={isMinted ? imageURI : 'img/blockchain.png'} alt="Placeholder" />
+      <div>
+        <h5>ID #{tokeniD}</h5>
+        {!isMinted ? (
+          <button onClick={mintToken}>
+          Mint
+          </button>
+        ) : (
+          <button onClick={getURI}>
+            Taken! Show URI
+          </button>
+        )};
+      </div>
+    </div>
+    <WalletBalance />
+    <h1>Fired Guys NFT Collection</h1>
+    {Array(totalMinted + 1)
+    .fill(0)
+    .map((_, i) => (
+     <div  key={i}>
+      <NFTImage tokenId={i} />
+     </div>
+    ))};
+  </div>
+);
+}
 
 
 

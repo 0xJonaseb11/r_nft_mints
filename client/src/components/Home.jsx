@@ -28,8 +28,101 @@ const Home = () => {
     return (
     <div>
       <WalletBalance />
+      <h1>Fired Guys NFT Collection</h1>
+      {Array(totalMinted + 1)
+      .fill(0)
+      .map((_, i) => (
+       <div  key={i}>
+        <NFTImage tokenId={i} />
+       </div>
+      ))};
     </div>
-  )
+  );
 }
+
+function NFTImage({tokenId, getCount}) {
+  const contentId = 'IPFS url like Pinata';
+  const metadataURI = `${contentId} / ${tokenId}.json`;
+
+  const imageURI = `img/${tokenId}.png`;
+
+  const [isMinted, setIsMinted] = useState(false);
+}[]
+
+useEffect(() => {
+  getMintedStatus();
+
+}, [isMinted]);
+
+
+const getMintedStatus = async () => {
+  const result = await contract.isContentOwned(metadataURI);
+  console.log(result);
+  setIsMinted(result);
+};
+
+const mintToken = async () => {
+  const connection = contract.connect(signer);
+  const addr = connection.getAddress;
+  const result = await contract.payToMint(addr, metadataURI, {
+    value:ethers.utils.parseEther('0.05'),
+  });
+
+  await result.wait();
+  getMintedStatus;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
 
 export default Home;

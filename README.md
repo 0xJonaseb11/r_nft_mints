@@ -1,4 +1,4 @@
- Author: @Jonas-sebera
+# r_nft_mints
 
 -------
 
@@ -7,7 +7,7 @@
 Get ready to mint unlimited NFTs with full potential of decentralization | Web3.0
 Enjoy the incredibility of Decentralizaion
 
-### About
+## About
 
  Credits used
 
@@ -26,7 +26,6 @@ Enjoy the incredibility of Decentralizaion
 - Metamask pairing
 - Client - blockend pairing
 
+-------------------
 
-----
-
-@Jonas-sebera
+@0xJonaseb11

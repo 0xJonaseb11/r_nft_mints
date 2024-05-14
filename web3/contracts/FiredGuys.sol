@@ -18,8 +18,7 @@ contract FiredGuys is ERC721, ERC721URIStorage, Ownable {
 
     constructor(address initialOwner)
         ERC721("FiredGuys", "FYR")
-        Ownable(initialOwner)npm install @openzeppelin/contracts
-
+        Ownable(initialOwner)npm 
     {}
 
     function _baseURI() internal pure override returns (string memory) {
